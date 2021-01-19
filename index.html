@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Page Title</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Teko:wght@300&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      font-family: 'Teko', sans-serif;
+    }
+
+    body {
+      background-image: url("/images/pexels.jpg");
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+
+    .wrapper {
+      width: 100%;
+      height: 99vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      /* background-image: linear-gradient(210deg, red, orange, yellow, green, blue, indigo, violet); */
+      z-index: 5;
+      position: relative;
+    }
+
+    .circle {
+      width: 200px;
+      height: 200px;
+      background-image: linear-gradient(45deg, #b1db07, #f9be0421);
+      border-radius: 50%;
+      position: absolute;
+      top: 113px;
+      right: 660px;
+      z-index: 1;
+    }
+
+    .container {
+      width: 500px;
+      background: #f5f5f54f;
+      border-radius: 16px;
+      padding: 100px;
+      z-index: 10;
+    }
+
+
+
+    .row {
+      position: relative;
+    }
+
+    .down {
+      background: #ECF0F3;
+      mix-blend-mode: normal;
+      box-shadow: inset 2px 10px 4px rgba(0, 0, 0, 0.25), inset -31px -31px 43px rgba(255, 255, 255, 0.64);
+      border-radius: 50px;
+    }
+
+    .up {
+      background: #ECF0F3;
+      mix-blend-mode: normal;
+      box-shadow: 22px 20px 25px rgba(0, 0, 0, 0.25), -15px -25px 25px #FFFFFF;
+      border-radius: 50px;
+    }
+
+    input {
+      font-size:20px;
+
+      border: 0px;
+      height: 56px;
+      width: 100%;
+      padding: 0 30px;
+      color: red;
+      margin-top: 15px;
+    }
+
+    button {
+      width: 100%;
+      height: 50px;
+      border: 0px;
+      margin-top: 50px;
+      font-size:20px;
+
+    }
+
+    button:hover {
+      box-shadow: 12px 10px 25px rgba(231, 113, 113, 0.25), -5px -5px 25px #d6408b;
+
+    }
+
+    button:active {
+      position: relative;
+      box-shadow: 12px 10px 25px rgba(0, 0, 0, 0.25), -5px -5px 25px #FFFFFF;
+      top: 5px;
+      left: 5px;
+    }
+
+
+    :focus {
+      outline: 0px;
+    }
+
+    h1 {
+      text-align: center;
+      color: #2d2d2d;
+      font-size:50px;
+    }
+
+    label {
+      display: inline-block;
+      margin: 15px 0px;
+      color: #2d2d2d;
+      font-size:20px;
+    }
+
+    form {}
+  </style>
+</head>
+
+<body>
+  <div class="wrapper">
+    <div class="circle"></div>
+    <div class="container">
+      <h1>Login Form</h1>
+      <form>
+        <div class="row">
+          <label for="fname">First name:</label>
+          <input class="down" type="text" id="fname" name="fname" value="John">
+        </div>
+        <div class="row">
+          <label for="lname">Last name:</label>
+          <input type="text" class="down" id="lname" name="lname" value="Doe">
+        </div>
+        <div class="row">
+          <button class="up" type="submit">Submit</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</body>
+
+</html>
